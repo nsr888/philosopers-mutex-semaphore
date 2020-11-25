@@ -6,7 +6,7 @@
 /*   By: ksinistr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:39:00 by ksinistr          #+#    #+#             */
-/*   Updated: 2020/11/24 12:55:51 by ksinistr         ###   ########.fr       */
+/*   Updated: 2020/11/25 15:46:24 by ksinistr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ void				destroy_semaphores(t_sem *sem, int number_of_philosophers)
 	while (++i < number_of_philosophers)
 		sem_post(sem->forks);
 	sem_close(sem->forks);
-	sem_post(sem->steward);
+	i = -1;
+	while (++i < number_of_philosophers)
+		sem_post(sem->steward);
 	sem_close(sem->steward);
-	sem_post(sem->write_lock);
-	sem_close(sem->steward);
+	i = -1;
+	while (++i < number_of_philosophers)
+		sem_post(sem->write_lock);
+	sem_close(sem->write_lock);
 }
 
 static t_vars		*init_vars_struct(t_argv args, t_philosophers *philo, \

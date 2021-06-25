@@ -1,4 +1,4 @@
-# Solving Dining Philosopher Problem using Semaphores, Mutex, Threads, Processes
+# Solving Dining Philosopher Problem
 
 ![Dining Philosopher Problem](https://user-images.githubusercontent.com/12528718/123442516-9ccb7400-d5dd-11eb-9e3d-314feffdb5fd.jpg)
 

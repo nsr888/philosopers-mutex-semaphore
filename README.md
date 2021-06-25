@@ -28,5 +28,5 @@ philosopher with processes and semaphore
 * They have no states in memory but the number of available forks is represented by a semaphore.
 * Each philosopher should be a process and the main process should not be a philosopher.
 
-# Usefull links
+# Useful links
 * http://www.stolyarov.info/books/programming_intro/vol3 (page 553)
